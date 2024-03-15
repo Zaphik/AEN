@@ -1,0 +1,48 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:Panda.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="1920" Height="1080"
+        x:Class="Panda.MainWindow"
+        Title="Panda"
+        x:CompileBindings="True"
+        x:DataType="vm:MainWindowViewModel">
+    <NativeMenu.Menu>
+        <NativeMenu>
+            <NativeMenuItem Header="Welcome">
+                <NativeMenu>
+                    <NativeMenuItem Header="These" />
+                    <NativeMenuItem Header="Do" />
+                    <NativeMenuItem Header="Nothing" />
+                </NativeMenu>
+            </NativeMenuItem>
+            <NativeMenuItem Header="To">
+                <NativeMenu>
+                    <NativeMenuItem Header="But" />
+                    <NativeMenuItem Header="Look" />
+                    <NativeMenuItem Header="Cool" />
+                </NativeMenu>
+            </NativeMenuItem>
+            <NativeMenuItem Header="Pandemonium">
+                <NativeMenu>
+                    <NativeMenuItem Header="Do" />
+                    <NativeMenuItem Header="You" />
+                    <NativeMenuItem Header="Agree?" />
+                </NativeMenu>
+            </NativeMenuItem>
+        </NativeMenu>
+    </NativeMenu.Menu>
+    <Grid RowDefinitions="4*,5*,4*" ColumnDefinitions="4*,6*,4*">
+        <Image Source="/Resources/Images/poster.jpg"
+               Grid.ColumnSpan="3" Grid.RowSpan="3"
+               Stretch="UniformToFill" />
+        <TransitioningContentControl Content="{CompiledBinding CurrentPage}"
+                                     Grid.Row="1" Grid.Column="1">
+            <TransitioningContentControl.PageTransition>
+                <CrossFade Duration="0:00:00.500" />
+            </TransitioningContentControl.PageTransition>
+        </TransitioningContentControl>
+    </Grid>
+</Window>

@@ -1,0 +1,4 @@
+/Users/umarfarrukh/RiderProjects/V2/Panda.Server/bin/Release/net8.0/osx-arm64/publish/Panda.Server
+/Users/umarfarrukh/RiderProjects/V2/Panda.Server/bin/Release/net8.0/osx-arm64/publish/appsettings.Development.json
+/Users/umarfarrukh/RiderProjects/V2/Panda.Server/bin/Release/net8.0/osx-arm64/publish/appsettings.json
+/Users/umarfarrukh/RiderProjects/V2/Panda.Server/bin/Release/net8.0/osx-arm64/publish/Panda.Server.pdb

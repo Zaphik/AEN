@@ -1,0 +1,28 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Panda.ViewModels.MenuViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Panda.Views.MenuViews.LeaderBoardView"
+             x:CompileBindings="True"
+             x:DataType="vm:LeaderBoardViewModel">
+    <!-- Datagrid that displays the username, character, highscore, and longestlived -->
+    <StackPanel>
+        <DataGrid Margin="20" ItemsSource="{CompiledBinding Scores}"
+                  IsReadOnly="True" CanUserResizeColumns="True"
+                  GridLinesVisibility="All"
+                  BorderThickness="1" BorderBrush="Gray">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="User" Binding="{CompiledBinding Username}" />
+                <DataGridTextColumn Header="Character" Binding="{CompiledBinding Character}" />
+                <DataGridTextColumn Header="High Score" Binding="{CompiledBinding HighScore}" />
+                <DataGridTextColumn Header="Longest Lived" Binding="{CompiledBinding LongestLived}" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Classes="Normal"
+               Content="{CompiledBinding Error}"
+               Foreground="Red" />
+    </StackPanel>
+</UserControl>

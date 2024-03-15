@@ -1,0 +1,67 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:Panda.ViewModels.RegisterViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Panda.Views.RegisterViews.regQuestionView"
+             x:CompileBindings="True"
+             x:DataType="vm:regQuestionViewModel">
+    <!-- Styling for the textblocks to type in and the buttons to click, alongside a label for errors  -->
+    <Border Background="White" CornerRadius="0,16,16,0">
+        <StackPanel Margin="20" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Label Classes="Title"
+                       Content="Make A Question"
+                       Foreground="#516fbe"
+                       Margin="0 10 0 5"
+                       HorizontalAlignment="Center" />
+                <Image Source="/Resources/Images/infodot.png"
+                       MaxHeight="16"
+                       VerticalAlignment="Center"
+                       Margin="0,0,0,10">
+                    <ToolTip.Tip>
+                        <Label Classes="Normal"
+                               Content="This is used just in case you forget yer password"
+                               FontSize="8" />
+                    </ToolTip.Tip>
+                </Image>
+            </StackPanel>
+            <StackPanel Margin="0,27,0,0"
+                        HorizontalAlignment="Center">
+                <Label Classes="Normal"
+                       Foreground="#516fbe"
+                       HorizontalAlignment="Left"
+                       Content="Yer own question" />
+                <TextBox Text="{CompiledBinding Question}"
+                         Classes="Entry">
+                    <ToolTip.Tip>
+                        <Label Classes="Normal"
+                               Content="It's gotta be something you'll remember"
+                               FontSize="8" />
+                    </ToolTip.Tip>
+                </TextBox>
+            </StackPanel>
+            <StackPanel Margin="0,27,0,0"
+                        HorizontalAlignment="Center">
+                <Label Classes="Normal"
+                       Foreground="#516fbe"
+                       HorizontalAlignment="Left"
+                       Content="Answer" />
+                <TextBox Text="{CompiledBinding Answer}"
+                         Classes="Entry"
+                         HorizontalAlignment="Center" />
+            </StackPanel>
+            <Label Content="{CompiledBinding Error}"
+                   Height="20"
+                   Padding="0,7,0,0"
+                   FontSize="11"
+                   Foreground="#E44C5E"
+                   HorizontalAlignment="Center"
+                   Opacity="0.74" />
+            <Button Command="{CompiledBinding SendBtnCommand}"
+                    Classes="lgnbtn"
+                    Content="Register" />
+        </StackPanel>
+    </Border>
+</UserControl>

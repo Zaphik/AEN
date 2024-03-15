@@ -1,0 +1,71 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:vm="using:Panda.ViewModels.RegisterViewModels"
+             x:Class="Panda.Views.RegisterViews.regView"
+             x:CompileBindings="True"
+             x:DataType="vm:regViewModel">
+    <!-- Styling for the textblocks to type in and the buttons to click, alongside a label for errors  -->
+    <Border Background="White" CornerRadius="0,16,16,0">
+        <StackPanel Margin="20,25,20,0">
+            <Label Classes="Title"
+                   Content="Register To Pandemonium"
+                   Foreground="#516fbe" />
+            <StackPanel Margin="0,14,0,0"
+                        HorizontalAlignment="Center">
+                <Label Classes="Normal"
+                       Foreground="#516fbe"
+                       HorizontalAlignment="Left"
+                       Content="Username" />
+                <TextBox Text="{CompiledBinding Regusername}"
+                         Classes="Entry"
+                         Watermark="Max 16 Characters" />
+            </StackPanel>
+            <StackPanel Margin="0,14,0,0"
+                        HorizontalAlignment="Center">
+                <Label Classes="Normal"
+                       Foreground="#516fbe"
+                       HorizontalAlignment="Left"
+                       Content="Password" />
+                <TextBox Text="{CompiledBinding Regpassword}"
+                         Classes="Entry"
+                         PasswordChar="{CompiledBinding PassChar}"
+                         Watermark="Max 20 Characters" />
+            </StackPanel>
+            <StackPanel Margin="37,14,0,0"
+                        HorizontalAlignment="Center">
+                <Label Classes="Normal"
+                       Foreground="#516fbe"
+                       HorizontalAlignment="Left"
+                       Content="Re-Enter Password" />
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Text="{CompiledBinding Regrepassword}"
+                             Classes="Entry"
+                             PasswordChar="{CompiledBinding PassChar}"
+                             Watermark="Max 20 Characters" />
+                    <Button Command="{CompiledBinding CharPassCommand}"
+                            Classes="lgnbtn"
+                            Background="Transparent"
+                            Padding="10,7,0,0">
+                        <Image Source="/Resources/Images/passhow.png" Height="25" />
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+            <Label Content="{CompiledBinding Error}"
+                   Height="20"
+                   Padding="0,7,0,0"
+                   FontSize="11"
+                   Foreground="#E44C5E"
+                   HorizontalAlignment="Center"
+                   Opacity="0.74" />
+            <Button Command="{CompiledBinding regBtnCommand}"
+                    Classes="lgnbtn"
+                    Margin="75,0"
+                    Padding="40,9"
+                    Content=" Next  "
+                    HorizontalAlignment="Center" />
+        </StackPanel>
+    </Border>
+</UserControl>

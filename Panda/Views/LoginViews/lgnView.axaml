@@ -1,0 +1,68 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:Panda.ViewModels.LoginViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Panda.Views.LoginViews.lgnView"
+             x:CompileBindings="True"
+             x:DataType="vm:lgnViewModel">
+    <!-- Styling for the textblocks to type in and the buttons to click, alongside a label for errors  -->
+    <Border Background="White" CornerRadius="0,16,16,0">
+        <StackPanel Margin="20,50,20,100">
+            <Label Classes="Title"
+                   Content="Login To Pandemonium"
+                   Foreground="#516fbe" />
+            <StackPanel Margin="0,27,0,0"
+                        HorizontalAlignment="Center">
+                <Label Classes="Normal"
+                       Foreground="#516fbe"
+                       HorizontalAlignment="Left"
+                       Content="Username" />
+                <TextBox Text="{CompiledBinding Username}"
+                         Classes="Entry" />
+            </StackPanel>
+            <StackPanel Margin="35,24,0,0"
+                        HorizontalAlignment="Center">
+                <Label Classes="Normal"
+                       Foreground="#516fbe"
+                       HorizontalAlignment="Left"
+                       Content="Password" />
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Text="{CompiledBinding Password}"
+                             Classes="Entry"
+                             PasswordChar="{CompiledBinding PassChar}" />
+                    <Button Command="{CompiledBinding CharPassCommand}"
+                            Classes="lgnbtn"
+                            Background="Transparent"
+                            Padding="10,7,0,0">
+                        <Image Source="/Resources/Images/passhow.png" Height="25" />
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Label Content="{CompiledBinding Error}"
+                       Height="27"
+                       FontSize="11"
+                       Padding="0,7,0,0"
+                       Foreground="#E44C5E"
+                       Opacity="0.74" />
+                <Button Content="{CompiledBinding ForgotPassword}"
+                        Command="{CompiledBinding forgotPasswordBtnCommand}"
+                        Height="26"
+                        FontSize="11"
+                        Foreground="#516fbe"
+                        Background="Transparent"
+                        Opacity="0.74"
+                        VerticalAlignment="Center" />
+            </StackPanel>
+            <Button Command="{CompiledBinding lgnBtnCommand}"
+                    Content="Login"
+                    Classes="lgnbtn"
+                    Margin="75,0"
+                    Padding="40,9"
+                    Background="White"
+                    HorizontalAlignment="Center" />
+        </StackPanel>
+    </Border>
+</UserControl>

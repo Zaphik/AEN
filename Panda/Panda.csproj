@@ -1,0 +1,142 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+
+        <PackageReference Include="Avalonia" Version="11.0.6"/>
+        <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.6"/>
+        <PackageReference Include="Avalonia.Desktop" Version="11.0.6"/>
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.6"/>
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.6"/>
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.6"/>
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.1"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0"/>
+        <PackageReference Include="MonoGame.Framework.DesktopGL.9000" Version="3.10.9001"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <None Remove="Resources\Fonts\OpenSans-Regular.ttf"/>
+        <AvaloniaResource Include="bin\Debug\net8.0\Content\logo.ico"/>
+        <AvaloniaResource Include="Content\logo.ico"/>
+        <AvaloniaResource Include="Resources\Fonts\OpenSans-Regular.ttf"/>
+        <None Remove="Resources\Fonts\OpenSans-Semibold.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\OpenSans-Semibold.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-Black.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-Black.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-BlackItalic.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-BlackItalic.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-Bold.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-Bold.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-BoldItalic.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-BoldItalic.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-ExtraBold.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-ExtraBold.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-ExtraBoldItalic.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-ExtraBoldItalic.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-ExtraLight.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-ExtraLight.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-ExtraLightItalic.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-ExtraLightItalic.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-Italic.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-Italic.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-Light.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-Light.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-LightItalic.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-LightItalic.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-Medium.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-Medium.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-MediumItalic.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-MediumItalic.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-Regular.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-Regular.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-SemiBold.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-SemiBold.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-SemiBoldItalic.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-SemiBoldItalic.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-Thin.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-Thin.ttf"/>
+        <None Remove="Resources\Fonts\Poppins-ThinItalic.ttf"/>
+        <AvaloniaResource Include="Resources\Fonts\Poppins-ThinItalic.ttf"/>
+        <None Remove="Resources\Images\abstain.png"/>
+        <AvaloniaResource Include="Resources\Images\abstain.png"/>
+        <None Remove="Resources\Images\abstain_black.png"/>
+        <AvaloniaResource Include="Resources\Images\abstain_black.png"/>
+        <None Remove="Resources\Images\book.png"/>
+        <AvaloniaResource Include="Resources\Images\book.png"/>
+        <None Remove="Resources\Images\chibs.png"/>
+        <AvaloniaResource Include="Resources\Images\chibs.png"/>
+        <None Remove="Resources\Images\infodot.png"/>
+        <AvaloniaResource Include="Resources\Images\infodot.png"/>
+        <None Remove="Resources\Images\logo.png"/>
+        <AvaloniaResource Include="Resources\Images\logo.ico"/>
+        <AvaloniaResource Include="Resources\Images\logo.png"/>
+        <None Remove="Resources\Images\passhow.png"/>
+        <AvaloniaResource Include="Resources\Images\passhow.png"/>
+        <None Remove="Resources\Images\poster.jpg"/>
+        <None Remove="Resources\Images\SexiestRag.png"/>
+        <None Remove="Resources\Images\trophy.png"/>
+        <AvaloniaResource Include="Resources\Images\trophy.png"/>
+        <None Remove="Content\Audio\Motivation.wav"/>
+        <None Remove="Resources\Images\Natsu.png"/>
+        <AvaloniaResource Include="Resources\Images\Natsu.png"/>
+        <None Remove="Resources\Images\Erza.png"/>
+        <AvaloniaResource Include="Resources\Images\Erza.png"/>
+        <None Remove="Resources\Images\Settings.png"/>
+        <AvaloniaResource Include="Resources\Images\Settings.png"/>
+        <None Remove="Resources\Images\Logout.png"/>
+        <AvaloniaResource Include="Resources\Images\Logout.png"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <AvaloniaResource Include="Resources\Images\poster.jpg"/>
+        <Content Include="Content\.DS_Store"/>
+        <Content Include="Content\Audio\Motivation.xnb"/>
+        <Content Include="Content\Audio\yosei.xnb"/>
+        <None Remove="Content\Audio\yosei.xnb"/>
+        <None Remove="Content\Audio\Motivation.xnb"/>
+        <None Remove="Content\Fonts\HFHourglass.xnb"/>
+        <None Remove="Content\Fonts\Lindsey16.xnb"/>
+        <Content Update="Server\appsettings.json">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="Server\appsettings.Development.json">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="Server\appsettings.json">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="Server\appsettings.Development.json">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <None Remove="Content\Fonts\Peanut Butter.xnb"/>
+        <Content Include="Content\Fonts\Peanut Butter.xnb">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <ProjectReference Include="..\Panda.Server\Panda.Server.csproj"/>
+    </ItemGroup>
+</Project>

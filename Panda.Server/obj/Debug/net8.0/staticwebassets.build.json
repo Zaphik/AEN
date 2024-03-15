@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "gnRDkfEjEi1xjEyWs1xtX3PEV6ynFFPFsXYbe0hrc9Y=",
+  "Source": "Panda.Server",
+  "BasePath": "_content/Panda.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda", "Panda\Panda.csproj", "{8DDF88D4-E0C1-4A56-82D3-408560FB8E1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.Server", "Panda.Server\Panda.Server.csproj", "{56E6736A-B22F-4D51-8192-694579D6140E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DDF88D4-E0C1-4A56-82D3-408560FB8E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DDF88D4-E0C1-4A56-82D3-408560FB8E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DDF88D4-E0C1-4A56-82D3-408560FB8E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DDF88D4-E0C1-4A56-82D3-408560FB8E1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E6736A-B22F-4D51-8192-694579D6140E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E6736A-B22F-4D51-8192-694579D6140E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E6736A-B22F-4D51-8192-694579D6140E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E6736A-B22F-4D51-8192-694579D6140E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,110 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Panda.ViewModels.MenuViewModels.SettingsViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Panda.Views.MenuViews.SettingsViews.addSettingsView"
+             x:CompileBindings="True"
+             x:DataType="vm:addSettingsViewModel">
+    <!-- Styling for the textblocks to type in and the buttons to click, alongside a label for errors and sliders for volume and screensize -->
+    <Grid RowDefinitions="*,Auto">
+        <Grid Grid.Row="0" RowDefinitions="Auto, *">
+            <TextBox Classes="Entry"
+                     Text="{CompiledBinding SelectedSetting.Name}"
+                     HorizontalAlignment="Center" />
+            <Grid Grid.Row="1" ColumnDefinitions="*, Auto">
+                <Grid Grid.Column="0" RowDefinitions="*,*,*,*" HorizontalAlignment="Center">
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,-15,0,0">
+                        <TextBox Classes="Entry"
+                                 Text="{CompiledBinding SelectedSetting.Up}"
+                                 MaxWidth="29" Height="60" HorizontalAlignment="Center"
+                                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                 Margin="84,-30,250,110"
+                                 Padding="0,0,0,20"
+                                 FontSize="27" />
+                        <StackPanel Margin="-180,-60,0,110">
+                            <Label Classes="Normal"
+                                   Content="Build" />
+                            <TextBox Classes="Entry"
+                                     Text="{CompiledBinding SelectedSetting.Build}"
+                                     MaxWidth="29" Height="60" HorizontalAlignment="Center"
+                                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+
+                                     FontSize="27" />
+                        </StackPanel>
+                        <StackPanel Margin="0,-60,0,0">
+                            <Label Classes="Normal"
+                                   Content="Reset" />
+                            <TextBox Classes="Entry"
+                                     Text="{CompiledBinding SelectedSetting.Reset}"
+                                     MaxWidth="29" Height="60" HorizontalAlignment="Center"
+                                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+
+                                     FontSize="27" />
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,-140,250,0">
+
+                        <TextBox Classes="Entry"
+                                 Text="{CompiledBinding SelectedSetting.Left}"
+                                 MaxWidth="20" MaxHeight="60"
+                                 Margin="0,9,20,0"
+                                 Padding="0,0,0,0"
+                                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                 FontSize="27" />
+
+                        <TextBox Classes="Entry"
+                                 Text="{CompiledBinding SelectedSetting.Down}"
+                                 MaxWidth="20" MaxHeight="60"
+                                 Margin="0,9,20,0"
+                                 Padding="0,0,0,0"
+                                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                 FontSize="27" />
+
+                        <TextBox Classes="Entry"
+                                 Text="{CompiledBinding SelectedSetting.Right}"
+                                 MaxWidth="20" MaxHeight="60"
+                                 Padding="0,0,0,0"
+                                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                 FontSize="27" />
+                    </StackPanel>
+                    <StackPanel Grid.Row="3" Margin="0,-50,0,0">
+                        <Label Classes="Normal"
+                               Content="Screen Ratio:" />
+                        <Slider Minimum="1" Maximum="2"
+                                Value="{CompiledBinding SelectedSetting.ScreenRatio}"
+                                Width="200" />
+                    </StackPanel>
+                </Grid>
+                <StackPanel VerticalAlignment="Center"
+                            Grid.Column="1"
+                            Margin="-60,0,60,0">
+                    <StackPanel>
+                        <Label Classes="Normal"
+                               HorizontalContentAlignment="Center"
+                               Content="Volume :" />
+                    </StackPanel>
+                    <Slider Orientation="Vertical"
+                            Minimum="0.01" Maximum="1.00"
+                            Padding="0,20,0,0"
+                            Value="{CompiledBinding SelectedSetting.Volume}" Height="200" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <DockPanel Grid.Row="1" Width="600">
+            <Button DockPanel.Dock="Left" Classes="lgnbtn"
+                    Content="Go Back"
+                    Command="{CompiledBinding BackCommand}"
+                    HorizontalAlignment="Left" />
+            <Label Classes="Normal"
+                   Content="{CompiledBinding Error}"
+                   HorizontalAlignment="Center"
+                   Foreground="Red" />
+            <Button DockPanel.Dock="Right" Classes="lgnbtn"
+                    Content="Add Settings"
+                    Command="{CompiledBinding ConfirmChoiceCommand}"
+                    HorizontalAlignment="Right" />
+        </DockPanel>
+    </Grid>
+</UserControl>

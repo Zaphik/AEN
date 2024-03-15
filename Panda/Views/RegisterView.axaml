@@ -1,0 +1,51 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:Panda.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Panda.Views.RegisterView"
+             x:CompileBindings="True"
+             x:DataType="vm:RegisterViewModel">
+    <!-- Styling on the left for a navtolgn button and a contentcontrol that holds the value of the current page on the right side -->
+    <Border
+        Background="White" BorderBrush="White" Opacity="0.7"
+        BorderThickness="4" CornerRadius="16">
+        <Grid ColumnDefinitions="2*, 3*">
+            <Border Grid.Column="0" CornerRadius="16,0,0,16" Background="Transparent" Padding="0">
+                <Image Source="/Resources/Images/abstain.png" Opacity=".21" Stretch="UniformToFill" />
+            </Border>
+            <Border Grid.Column="0" Background="#516fbe" CornerRadius="16,0,0,16">
+                <Border.BorderBrush>
+                    <SolidColorBrush Color="#516fbe" />
+                </Border.BorderBrush>
+                <StackPanel Margin="20,50,20,100">
+                    <Image Source="/Resources/Images/logo.png" Height="98" Opacity="0.8" />
+                    <Label Classes="Title"
+                           Content="Welcome Newbie!"
+                           Foreground="White" />
+                    <StackPanel Margin="0,30,0,0" HorizontalAlignment="Center">
+                        <Label Classes="Normal"
+                               Content="Already have an account?"
+                               Foreground="White" />
+                        <Label Classes="Normal"
+                               Content="Login to stay connected."
+                               Foreground="White"
+                               Margin="0,3,0,0" />
+                        <Button Command="{CompiledBinding navLgnCommand}"
+                                Classes="lgnbtn"
+                                Margin="27"
+                                Content="Login"
+                                HorizontalAlignment="Center" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="1" CornerRadius="0,16,16,0" Background="Transparent" Padding="0">
+                <Image Source="/Resources/Images/abstain_black.png" Opacity=".51" Stretch="UniformToFill" />
+            </Border>
+            <Border Grid.Column="1" Background="White" CornerRadius="0,16,16,0">
+                <TransitioningContentControl Content="{CompiledBinding CurrentPage}" />
+            </Border>
+        </Grid>
+    </Border>
+</UserControl>

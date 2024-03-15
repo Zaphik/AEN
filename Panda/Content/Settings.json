@@ -1,0 +1,41 @@
+[
+  {
+    "SettingsID": null,
+    "Name": "Default",
+    "Up": "W",
+    "Down": "S",
+    "Left": "A",
+    "Right": "D",
+    "Reset": "V",
+    "Volume": 0,
+    "ScreenRatio": 1,
+    "Build": "C",
+    "UserID": null
+  },
+  {
+    "SettingsID": null,
+    "Name": "Combat",
+    "Up": "E",
+    "Down": "D",
+    "Left": "S",
+    "Right": "F",
+    "Reset": "R",
+    "Volume": 0,
+    "ScreenRatio": 2,
+    "Build": "Q",
+    "UserID": null
+  },
+  {
+    "SettingsID": null,
+    "Name": "Movement",
+    "Up": "T",
+    "Down": "G",
+    "Left": "F",
+    "Right": "H",
+    "Reset": "V",
+    "Volume": 0.3,
+    "ScreenRatio": 1.5,
+    "Build": "Q",
+    "UserID": null
+  }
+]

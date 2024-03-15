@@ -1,0 +1,64 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- classes in xaml? oof surely that's extra oop marks?-->
+
+    <Style Selector="Label.Title">
+        <Setter Property="FontSize" Value="30" />
+        <Setter Property="FontWeight" Value="SemiLight" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+    </Style>
+    <Style Selector="Label.Normal">
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="FontWeight" Value="ExtraLight" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+    </Style>
+    <Style Selector="TextBlock.Normal">
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="FontWeight" Value="ExtraLight" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+    </Style>
+
+    <Style Selector="ComboBox">
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="#516fbe" />
+        <Setter Property="Width" Value="200" />
+        <Setter Property="Margin" Value="0,7,0,0" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Foreground" Value="#516fbe" />
+        <Setter Property="CornerRadius" Value="3" />
+    </Style>
+    <Style Selector="Button.lgnbtn">
+        <Setter Property="CornerRadius" Value="24" />
+        <Setter Property="Padding" Value="24,7" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Opacity" Value="0.9" />
+        <Setter Property="Foreground" Value="#516fbe" />
+        <Setter Property="Background" Value="White" />
+    </Style>
+
+    <Style Selector="TextBox.Entry">
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="#516fbe" />
+        <Setter Property="Width" Value="200" />
+        <Setter Property="Margin" Value="0,7,0,0" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Foreground" Value="#516fbe" />
+        <Setter Property="CornerRadius" Value="10" />
+    </Style>
+    <Style Selector="Label.EntryLbl">
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="Height" Value="33" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="#516fbe" />
+        <Setter Property="Width" Value="200" />
+        <Setter Property="Margin" Value="0,7,0,0" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="#516fbe" />
+        <Setter Property="CornerRadius" Value="3" />
+    </Style>
+
+</Styles>

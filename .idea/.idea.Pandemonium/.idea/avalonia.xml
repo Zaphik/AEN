@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Panda/App.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/AppStyles.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/MainWindow.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/LeaderBoardView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/LoginView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/LoginViews/forgotPasswordView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/LoginViews/lgnView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/LoginViews/resetPasswordView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/MenuView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/MenuViews/GameView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/MenuViews/GameViews/LoadGameView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/MenuViews/GameViews/NewGameView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/MenuViews/GameViews/PickGameView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/MenuViews/GameViews/StartGameViewModel.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/MenuViews/LeaderBoard.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/MenuViews/LeaderBoardView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/MenuViews/SettingsViews/addSettingsView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/MenuViews/SettingsViews/loadSettingsView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/MenuViews/settingsView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/MenuViews/startGameView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/RegisterView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/RegisterViews/regQuestionView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/RegisterViews/regView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Panda/Views/StartView.axaml" value="Panda/Panda.csproj" />
+        <entry key="Pandemonium/MainWindow.axaml" value="Pandemonium/Pandemonium.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

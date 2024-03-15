@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "aSUfV4ZikmQybyqnagtgj5HBb+WZJ/KWNl1kwSaTbJw=",
+  "Source": "Panda.Server",
+  "BasePath": "_content/Panda.Server",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
